@@ -1,0 +1,17 @@
+1. Create a data structure i.e FIFO with set() for membership check (as of now its called seen_msg and it's a set of undefined length)
+2. In server.py, get_peers() needs to be re-written so that list of peers with least number of degree is returned
+3. For message authentication, Include MAC tag
+4. Before publishing, make sure there aren't 2 publishers publishing in same topic but one in closed sytem and other in open
+
+5#. As of now
+
+
+commands:
+
+python server.py -> For starting server
+python peers.py -> for starting a subscriber client, commands are to be given for subscribing and the commands are as follows:
+	subscribe topic -> for open system
+	subscribe topic passphrase -> for closed system
+
+python peers.py prod topic -> for publishing msg about topic in open system
+python peers.py prod topic closed passphrase -> for publishing msg about topic in closed system
